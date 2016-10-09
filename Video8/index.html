@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Filters</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css" media="screen" title="Standard CSS">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController">
+    <label for="num_rows">Number of Rows</label>
+    <input type="number" id="num_rows" ng-model="numRows" min="1" max="10">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Salary</th>
+      </tr>
+      <tr ng-repeat="employee in employees | limitTo:numRows">
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.last_name | uppercase}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.dateOfBirth | date:'MM/dd/yyyy'}}</td>
+        <td>{{employee.salary | currency:'₹':0}}</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

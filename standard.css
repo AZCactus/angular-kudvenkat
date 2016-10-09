@@ -1,0 +1,14 @@
+body, table, input {
+  font-size: 1.2em;
+}
+
+table th {
+  text-align: left;
+  border: 1px solid black;
+  border-bottom-width: 2px;
+  background-color: #CCC;
+}
+table td {
+  border : 1px solid black;
+  padding: 2px;
+}
