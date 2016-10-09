@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Handling Events</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+</head>
+<body ng-app="myModel">
+ <div ng-controller="myController">
+   <table>
+     <thead>
+       <tr>
+         <th>Technology</th>
+         <th>Likes</th>
+         <th>Dislikes</th>
+         <th></th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr ng-repeat="language in languages">
+         <td>
+           {{language.name}}
+         </td>
+         <td>
+           {{language.likes}}
+         </td>
+         <td>
+           {{language.dislikes}}
+         </td>
+         <td>
+           <button type="button" name="like" ng-click="incrementLikes(language)">Like</button>
+           <button type="button" name="dislike" ng-click="incrementDislikes(language)">Dislike</button>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+</body>
+</html>
