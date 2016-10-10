@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sorting data in AngularJs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController">
+    <label for="num_rows">Number of Rows: </label>
+    <input type="number" id="num_rows" ng-model="numRows" min="1" max="10">
+    <label for="order_by">Order by: </label>
+    <!-- <input type="text" id="order_by" ng-model="orderBy"> -->
+    <select id="order_by" ng-model="orderBy" ng-options="col for col in (getKeys(employees[0]) | filter : '!$')">
+       <!-- <option ng-repeat="col in ['first_name','last_name','email','dateOfBirth','salary']" value="{{col}}">{{col}}</option> -->
+    </select>
+    <br/>
+
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Salary</th>
+      </tr>
+      <tr ng-repeat="employee in employees | orderBy:orderBy | limitTo:numRows">
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.last_name | uppercase}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.dateOfBirth | date:'MM/dd/yyyy'}}</td>
+        <td>{{employee.salary | currency:'₹':0}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
