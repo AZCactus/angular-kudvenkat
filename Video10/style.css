@@ -1,0 +1,10 @@
+.ascending::after {
+    content: '˄';
+    float: right;
+    margin: 0 10px;
+}
+.descending::after {
+    content: '˅';
+    float: right;
+    margin: 0 10px;
+}

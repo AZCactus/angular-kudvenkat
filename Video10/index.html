@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sorting data in AngularJs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController">
+    <label for="num_rows">Number of Rows: </label>
+    <input type="number" id="num_rows" ng-model="numRows" min="1" max="10">
+    <label for="order_by">Order by: </label>
+    <!-- <input type="text" id="order_by" ng-model="orderBy"> -->
+    <select id="order_by" ng-model="orderBy" ng-options="col for col in (getKeys(employees[0]) | filter : '!$')">
+       <!-- <option ng-repeat="col in ['first_name','last_name','email','dateOfBirth','salary']" value="{{col}}">{{col}}</option> -->
+    </select>
+    <br/>
+
+    <table>
+      <tr>
+        <th ng-click="setSortColumn('first_name')"    ng-class="getSortClass('first_name')"  >First Name</th>
+        <th ng-click="setSortColumn('last_name')"     ng-class="getSortClass('last_name')"   >Last Name</th>
+        <th ng-click="setSortColumn('email')"         ng-class="getSortClass('email')"       >Email</th>
+        <th ng-click="setSortColumn('gender')"        ng-class="getSortClass('gender')"      >Gender</th>
+        <th ng-click="setSortColumn('dateOfBirth')"   ng-class="getSortClass('dateOfBirth')" >Date of Birth</th>
+        <th ng-click="setSortColumn('salary')"        ng-class="getSortClass('salary')"      >Salary</th>
+      </tr>
+      <tr ng-repeat="employee in employees | orderBy:orderBy:reverseOrder | limitTo:numRows">
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.last_name | uppercase}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.dateOfBirth | date:'MM/dd/yyyy'}}</td>
+        <td>{{employee.salary | currency:'₹':0}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
