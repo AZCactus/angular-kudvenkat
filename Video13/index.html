@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Creating Custom Filters</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Bonus</th>
+      </tr>
+      <tr ng-repeat="employee in employees">
+        <td>{{employee.first_name}} {{employee.last_name}}</td>
+        <td>{{employee.salary | currency}}</td>
+        <td>{{employee.salary | bonus | currency:void:0}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
