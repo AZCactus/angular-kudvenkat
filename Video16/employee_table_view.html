@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Date of birth</th>
+  </tr>
+  <tr ng-repeat="employee in employeeList">
+    <td>{{employee.first_name}} {{employee.last_name}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.gender}}</td>
+    <td>{{employee.dateOfBirth | date : 'MM/dd/yyyy'}}</td>
+  </tr>
+</table>

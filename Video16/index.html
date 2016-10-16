@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ngInclude</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController">
+    Type of View :
+    <select ng-model="view_type">
+      <option value="">-- Slect View Type --</option>
+      <option value="{{employeeTableView}}">Table</option>
+      <option value="{{employeeListView}}">List</option>
+    </select>
+    <div ng-include="view_type" ng-init="employeeList = employees"></div>
+    <!-- <div ng-include="employeeTableView" ng-init="employeeTab = employees" ng-show="view_type == 'table'"></div>
+    <div ng-include="employeeListView" ng-init="employeeList = employees" ng-show="view_type == 'list'"></div> -->
+  </div>
+</body>
+</html>

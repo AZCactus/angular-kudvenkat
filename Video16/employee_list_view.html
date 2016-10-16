@@ -1,0 +1,9 @@
+<ul>
+  <li ng-repeat="employee in employeeList">
+    {{employee.first_name}} {{employee.last_name}}
+    <ul>
+      <li>{{employee.gender}}</li>
+      <li>{{employee.dateOfBirth | date: 'MM/dd/yyyy'}}</li>
+    </ul>
+  </li>
+</ul>
