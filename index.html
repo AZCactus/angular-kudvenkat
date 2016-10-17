@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myModule">
 <head>
   <meta charset="UTF-8">
   <title>Videos</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+  <script>
+    angular.module("myModule", []).filter('expand', function(){
+      return function(num) {
+          let arr = [];
+          for(var i=1; i<=num; i++) {
+            arr.push(i);
+          }
+          return arr;
+        }
+    })
+  </script>
 </head>
 <body>
-  <div ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+  <div ng-repeat="i in (25 | expand)">
     <a href="{{'./Video' + i}}/index.html">Video{{i}}</a>
   </div>
 </body>
