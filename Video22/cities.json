@@ -1,0 +1,29 @@
+[
+  {
+    "country": "India",
+    "cities": [
+        {"name": "Delhi"},
+        {"name": "Mumbai"},
+        {"name": "Kolkata"},
+        {"name": "Chennai"}
+      ]
+  },
+  {
+    "country": "USA",
+    "cities": [
+        {"name": "New York"},
+        {"name": "Chicago"},
+        {"name": "San Francisco"},
+        {"name": "Miami"}
+      ]
+  },
+  {
+    "country": "United Kingdom",
+    "cities": [
+        {"name": "London"},
+        {"name": "Manchester"},
+        {"name": "Durham"},
+        {"name": "Old Traford"}
+      ]
+  }
+]

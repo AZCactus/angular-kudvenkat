@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sorting data in AngularJs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+  <style>
+    div.small_div {
+      height : 300px;
+      overflow: scroll;;
+    }
+  </style>
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController" class="small_div">
+    <button type="button" ng-repeat="country in countries" ng-click="scrollTo($index)">{{country.country}}</button>
+    <fieldset ng-repeat="country in countries" id="country_{{$index}}">
+      <legend>{{country.country}}</legend>
+      <ul>
+        <li ng-repeat="city in country.cities">
+          {{city.name}}
+        </li>
+      </ul>
+    </fieldset>
+  </div>
+
+</body>
+</html>
