@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Anchorscroll</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+  <style>
+    div.controller div {
+      width : 30%;
+      border : 1px solid black;
+      padding : 10px;
+    }
+  </style>
+</head>
+<body ng-app="myModel">
+  <div ng-controller="myController" class="controller">
+    <button id="top" ng-click="scrollTo('bottom')">Go to Bottom</button>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut odio eligendi deserunt explicabo repellendus accusantium, quo ab at, sit aspernatur laborum repellat quod temporibus assumenda, eius ducimus id alias velit.</div>
+    <div>Accusamus aspernatur laudantium magni esse temporibus earum in saepe odio inventore nulla ratione nam ullam deserunt enim, suscipit officia molestias sapiente quo, ipsam sunt tempora, commodi! Illum vitae id labore!</div>
+    <div>Ab velit dolorum, consectetur magni, ullam tenetur. Ipsam tenetur voluptatibus alias libero dignissimos atque exercitationem incidunt, optio earum totam! Minima, debitis assumenda molestias consequatur libero inventore corporis eligendi, at. Cumque.</div>
+    <div>Necessitatibus illo, doloribus dolor voluptatibus debitis. Minus est aut ad molestiae, praesentium excepturi labore, magni ipsam, temporibus ducimus modi officia magnam perspiciatis quis ea reiciendis voluptates. Dignissimos doloribus quam laboriosam?</div>
+    <div>Rerum, aliquam vel iusto, obcaecati et aperiam adipisci pariatur cum. Nemo voluptatibus, explicabo mollitia cupiditate officia, adipisci esse. Ea, ad, quia! Itaque maiores, quisquam iste, architecto voluptatibus beatae expedita aperiam.</div>
+    <div>Hic, ipsam, a veritatis ut doloremque quo minus eos quod esse vel asperiores veniam accusamus obcaecati accusantium at odit! Autem nemo atque accusamus error expedita in voluptatum quasi impedit magni.</div>
+    <div>Blanditiis fuga, obcaecati. Ab vel, enim quasi maiores, nemo velit. Facilis rerum enim rem? Voluptatibus, dolores quisquam. Incidunt quas, harum sed, fugiat corporis voluptatibus, ipsa iure rerum, quae vel quo.</div>
+    <div>Doloribus vitae, doloremque quod placeat iusto dignissimos necessitatibus, maiores recusandae sequi qui vel nobis neque. Illo pariatur, quo, corporis quisquam excepturi nemo! Doloribus aspernatur nobis nam odit repudiandae a quod?</div>
+    <div>Voluptatum, quos soluta. Quasi dolorum, libero quam quidem odit, repellendus harum, corporis repudiandae ipsam magnam id! Sequi neque nisi pariatur ut temporibus consectetur amet nihil, eum mollitia labore, consequuntur expedita!</div>
+    <div>Ratione exercitationem, earum amet nobis sed doloremque sit molestiae quos, libero illo, commodi deserunt. Aliquam laudantium, consequatur consectetur maiores! Tenetur incidunt quidem enim reprehenderit perferendis cum veritatis at neque sit.</div>
+    <button id="bottom" ng-click="scrollTo('top')">Go To Top</button>
+  </div>
+
+</body>
+</html>
