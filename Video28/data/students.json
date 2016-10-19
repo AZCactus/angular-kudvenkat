@@ -1,0 +1,37 @@
+[
+  {
+    "first_name": "Jannie",
+    "last_name": "Morrison",
+    "gender": "female"
+  },
+  {
+    "first_name": "Cathryn",
+    "last_name": "Whitney",
+    "gender": "female"
+  },
+  {
+    "first_name": "Eddie",
+    "last_name": "Chan",
+    "gender": "female"
+  },
+  {
+    "first_name": "Shelly",
+    "last_name": "Koch",
+    "gender": "female"
+  },
+  {
+    "first_name": "Holden",
+    "last_name": "Fulton",
+    "gender": "male"
+  },
+  {
+    "first_name": "Clarice",
+    "last_name": "Guerrero",
+    "gender": "female"
+  },
+  {
+    "first_name": "Le",
+    "last_name": "Saunders",
+    "gender": "male"
+  }
+]

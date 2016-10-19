@@ -1,0 +1,17 @@
+[
+  {
+    "name" : "Java",
+    "cost" : "100",
+    "instructor" : "Ashish Menon"
+  },
+  {
+    "name" : "IBM BPM",
+    "cost" : "200",
+    "instructor" : "Deepak Champatiray"
+  },
+  {
+    "name" : ".NET",
+    "cost" : "150",
+    "instructor" : "Vinod Dhanwe"
+  }
+]

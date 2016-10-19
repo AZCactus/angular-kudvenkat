@@ -1,0 +1,29 @@
+div {
+  margin :0;
+  padding :0;
+}
+div.header {
+  background-color: red;
+  height : 5em;
+}
+div.body {
+  height: 20em;
+  display: table;
+  width : 100%;
+}
+div.body div {
+  display: table-cell;
+  height: 100%;
+}
+div.navigation {
+  width : 20%;
+  background-color: green;
+}
+div.content {
+  width : 80%;
+  background-color: blue;
+}
+div.footer {
+  background-color: grey;
+  height : 2em;
+}
