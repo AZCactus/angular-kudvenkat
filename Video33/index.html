@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Nested Scopes using controllerAs syntax</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+  <style media="screen">
+    div {
+      margin-left : 10px;
+    }
+  </style>
+</head>
+<body ng-app="myModel">
+  <h1>Without the controllerAs Syntax</h1>
+  <div ng-controller="countryController">
+    {{name}}
+    <div ng-controller="stateController">
+      {{name}}
+      <div ng-controller="cityController">
+        {{name}}
+      </div>
+    </div>
+  </div>
+  <!-- =================================================== -->
+  <hr />
+  <h1>Without the controllerAs Syntax and accesing the parent controller</h1>
+  <div ng-controller="countryController">
+    {{name}}
+    <div ng-controller="stateController">
+      {{$parent.name}} - {{name}}
+      <div ng-controller="cityController">
+        {{$parent.$parent.name}} - {{$parent.name}} - {{name}}
+      </div>
+    </div>
+  </div>
+  <!-- =================================================== -->
+  <hr />
+  <h1>With the controllerAs Syntax</h1>
+  <div ng-controller="countryController as country">
+    {{country.name}}
+    <div ng-controller="stateController as state">
+      {{country.name}} - {{state.name}}
+      <div ng-controller="cityController as city">
+        {{country.name}} - {{state.name}} - {{city.name}}
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
