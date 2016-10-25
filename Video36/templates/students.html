@@ -1,0 +1,7 @@
+<h1>{{students.message}}</h1>
+<button type="button" name="button" ng-click="students.reloadData()">Reload</button>
+<ul>
+  <li ng-repeat="student in students.student_list">
+    {{student.first_name}} {{student.last_name}} : {{student.gender}}
+  </li>
+</ul>

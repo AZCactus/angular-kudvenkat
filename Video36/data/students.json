@@ -1,0 +1,87 @@
+[
+  
+  {
+    "id": 1,
+    "first_name": "Bernice",
+    "last_name": "Blevins",
+    "gender": "female",
+    "age": 27
+  },
+  {
+    "id": 2,
+    "first_name": "Patrica",
+    "last_name": "Rowland",
+    "gender": "female",
+    "age": 45
+  },
+  {
+    "id": 3,
+    "first_name": "Kristi",
+    "last_name": "Acosta",
+    "gender": "female",
+    "age": 31
+  },
+  {
+    "id": 4,
+    "first_name": "Lynch",
+    "last_name": "Chavez",
+    "gender": "male",
+    "age": 24
+  },
+  {
+    "id": 5,
+    "first_name": "Erma",
+    "last_name": "Rosa",
+    "gender": "female",
+    "age": 23
+  },
+  {
+    "id": 6,
+    "first_name": "Carver",
+    "last_name": "Watkins",
+    "gender": "male",
+    "age": 50
+  },
+  {
+    "id": 7,
+    "first_name": "Lenore",
+    "last_name": "Wilkerson",
+    "gender": "female",
+    "age": 30
+  },
+  {
+    "id": 8,
+    "first_name": "Morrison",
+    "last_name": "Sheppard",
+    "gender": "male",
+    "age": 46
+  },
+  {
+    "id": 9,
+    "first_name": "Slater",
+    "last_name": "Walsh",
+    "gender": "male",
+    "age": 36
+  },
+  {
+    "id": 10,
+    "first_name": "Deirdre",
+    "last_name": "Gross",
+    "gender": "female",
+    "age": 24
+  },
+  {
+    "id": 11,
+    "first_name": "Hahn",
+    "last_name": "Mays",
+    "gender": "male",
+    "age": 41
+  },
+  {
+    "id": 12,
+    "first_name": "Anna",
+    "last_name": "Todd",
+    "gender": "female",
+    "age": 39
+  }
+]
