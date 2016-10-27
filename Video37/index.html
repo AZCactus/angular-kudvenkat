@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>$scope and $rootScope</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../standard.css">
+</head>
+<body ng-app="myModel">
+  <div ng-controller="controller1 as one">
+    Controller 1 Name : {{one.name}} <br>
+    Root Scope Name: {{name}}
+  </div>
+  <div class="" ng-controller="controller2 as two">
+    Controller 2 Name: {{two.name}} <br>
+    Root Scope Name: {{name}}
+  </div>
+  <hr>
+  <div ng-controller="twoWayController as way2">
+    <input type="text" ng-model="way2.root.name"placeholder="Root Scope Name" />
+  </div>
+</body>
+</html>
