@@ -1,0 +1,11 @@
+<h1>{{header}}</h1>
+Search Student By Name :
+<input type="text" ng-model="name" placeholder="Search Student" />
+<button type="button" ng-click="searchStudent()">Search</button>
+<ul>
+  <li ng-repeat="student in students">
+    <a href="#/students/{{student.id}}">
+      {{student.first_name}} {{student.last_name}}
+    </a>
+  </li>
+</ul>
