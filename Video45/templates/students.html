@@ -1,0 +1,10 @@
+<h1>{{studentCtrl.header}}</h1>
+Search Student :
+  <input type="text" ng-model="studentCtrl.first_name">
+  <input type="text" ng-model="studentCtrl.last_name">
+  <button ng-click="studentCtrl.search()">Search</button>
+<div ng-repeat="student in studentCtrl.students">
+  <a ui-sref="studentDetails({id:student.id})">
+      {{student.first_name}} {{student.last_name}}
+  </a>
+</div>
